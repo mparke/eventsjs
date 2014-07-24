@@ -1,0 +1,21 @@
+{
+  "name": "eventsjs",
+  "version": "0.0.1",
+  "authors": [
+    "mparke <mparke78@gmail.com>"
+  ],
+  "description": "Events Mixin CommonJS Module",
+  "main": "events.js",
+  "keywords": [
+    "events",
+    "observable"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
