@@ -4,8 +4,7 @@
   "authors": [
     "mparke <mparke78@gmail.com>"
   ],
-  "description": "Events Mixin CommonJS Module",
-  "main": "events.js",
+  "description": "Events Module",
   "keywords": [
     "events",
     "observable"
