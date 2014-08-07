@@ -1,6 +1,5 @@
 // @preserve eventsjs, copyright Matthew Parke 2014, license https://github.com/mparke/eventsjs/blob/master/LICENSE
 (function (window, Array) {
-
   var slice = Array.prototype.slice;
 
   function Events () {
