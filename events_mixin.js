@@ -48,9 +48,9 @@
   }
 
   if (typeof module === 'object') {
-    define(function () { return Events; });
-  } else if (typeof define === 'function') {
     module.exports = Events;
+  } else if (typeof define === 'function') {
+    define(function () { return Events; });
   } else {
     window.Events = Events;
   }
