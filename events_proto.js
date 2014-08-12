@@ -2,12 +2,22 @@
 (function (window, Array) {
   var slice = Array.prototype.slice;
 
-  function Events () {
+  /**
+  *  Events prototype module
+  *  @constructor
+  *  @return {function} the mixin constructor
+  */
+  function Events() {
     this.events = {};
   }
 
-  // registers an event callback to be executed by name
-  Events.prototype.on = function (name, callback, context) {
+  /**
+  *  Registers an event callback to be executed by name with thisArg context
+  *  @param {string} name: the event name
+  *  @param {function} callback: the function to execute for event name
+  *  @param {object} context: the thisArg to be used in applying the callback
+  */
+  Events.prototype.on = function(name, callback, context) {
     if (!this.events[name]) {
       this.events[name] = [];
     }
@@ -15,16 +25,23 @@
     this.events[name].push({ callback: callback, context: context || window });
   }
 
-  // removes all events at name
-  Events.prototype.off = function (name) {
+  /**
+  *  Removes all events at name
+  *  @param {string} name: the event name
+  */
+  Events.prototype.off = function(name) {
     if (this.events[name]) {
       // http://jsperf.com/new-array-vs-splice-vs-slice/2
       this.events[name] = [];
     }
   }
 
-  // eventName, args...
-  Events.prototype.trigger = function () {
+  /**
+  *  Trigger the execution of callbacks associated with the given event name
+  *  @param {string} name: the event name
+  *  @param {...*} any number of additional arguments to be passed to all event callbacks
+  */
+  Events.prototype.trigger = function() {
     var args = slice.call(arguments);
     var callbacks = this.events[args.shift()];
     var length;
