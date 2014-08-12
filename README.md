@@ -7,7 +7,6 @@ Events Module
 ##### As a mixin with the revealing module
 <pre>
   <code>
-  // with another module
   function MyModule () { Events().call(this); }
   var myModule = new MyModule();
   
@@ -28,7 +27,6 @@ Events Module
 inheritance using [inherit_js](https://github.com/mparke/inherit_js)
 <pre>
   <code>
-  // extending another module
   function MyModule () { Events.prototype.constructor.call(this); }
   inherit(Events, MyModule);
   var myModule = new MyModule();
