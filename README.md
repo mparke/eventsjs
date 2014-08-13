@@ -4,7 +4,7 @@ eventsjs
 Events Module
 
 ### Usage
-##### As a mixin with the revealing module
+##### As a mixin with a revealing module
 <pre>
   <code>
   function MyModule () { Events().call(this); }
