@@ -9,7 +9,7 @@ var paths = {
 };
 
 gulp.task('clean', function(cb) {
-  del(['build'], cb);
+  del(['dist'], cb);
 });
 
 gulp.task('bump', function(){
@@ -33,7 +33,7 @@ gulp.task('bump-major', function(){
 gulp.task('scripts', ['clean'], function() {
   return gulp.src(paths.scripts)
     .pipe(uglify({ preserveComments: 'some' }))
-    .pipe(gulp.dest('build'));
+    .pipe(gulp.dest('dist'));
 });
 
 gulp.task('default', [
